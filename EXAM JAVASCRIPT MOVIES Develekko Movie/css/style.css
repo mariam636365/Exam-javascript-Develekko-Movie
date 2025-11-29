@@ -1,0 +1,451 @@
+/*  General Css STYLE*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: unset!important;
+}
+
+body {
+    background-color: #0D0D0D;
+    font-family: Segoe UI Light;
+}
+
+a, li {
+    text-decoration: none;
+    list-style-type: none;
+}
+/* CUSTOME PROP */
+:root {
+    --main-color: #000;
+    --secondary-color: #fff;
+}
+
+::selection {
+    background-color: #fff;
+    color: var(--main-color);
+}
+/* عشان ايENGINE وهل دي حاجه ضروري احطها ولا ممكن استبدلها عادي؟  */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#search {
+    transition: all 0.5s;
+    border: 2px solid #F8F6F6;
+}
+
+/*  NavBar WHITE */
+nav {
+    width: 60px;
+    background-color: #f8f6f6;
+    z-index: 999;
+    transition: all 0.5s ease-in-out;
+}
+
+nav .nav-logo {
+    padding: 25px 0;
+}
+
+nav .nav-logo img {
+    height: 48px;
+    user-select: none;
+}
+
+nav .nav-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+nav .nav-menu i {
+    font-size: 25px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+nav .nav-social {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-social i {
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.nav-logo, .nav-menu i, .nav-social {
+    position: relative; 
+    z-index: 100001; /* أعلى من nav */
+}
+/*   Side Nav  BLACKKKKKKKKKKKK*/
+.side-nav {
+    background-color: #000;
+    width: 250px;
+    z-index: 99999;
+    padding: 0 30px;
+    margin-left: -250px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden;
+    height: 300px; */
+}
+
+.menu ul li {
+    padding: 12px 0;
+}
+.menu ul li a {
+    color: #f9f6f6!important;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out !important;
+    
+}
+
+.menu ul li a:hover {
+    color: #ff655c !important;
+}
+
+.copyrights {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+}
+
+.copyrights p {
+    color: rgb(153, 153, 153)!important;
+}
+
+.rights-social a {
+    color: #f9f6f6;
+    padding-left: 15px;
+    font-size: 14px;
+}
+
+/* Herooooooooooooooooooooooooooooooooooooooooo SECTION */
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1517602302552-471fe67acf66?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+}
+
+#search::placeholder {
+    color: #6C757D !important;
+    opacity: 1;
+}
+
+.category-btn {
+    transition: 0.3s;
+}
+
+.category-btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Movie Cards */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.card-img-top {
+    height: 350px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 0.9rem;
+}
+
+
+/*  Cards STYLES*/
+.item {
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.item h1 {
+    font-family: "Segoe UI Light", sans-serif !important;
+    font-weight: 700 !important;
+    font-style: normal !important;
+    font-size: 35px !important;
+    line-height: 42px !important;
+    color: #ffffff;
+}
+
+.cardImage {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.cardImage img {
+    transition: all 0.5s ease-in-out;
+}
+
+.cardImage img.animate {
+    transform: rotate(5deg) scale(1.25);
+    filter: blur(3px);
+}
+
+.overlay {
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    inset: 0;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.overlay .title {
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.overlay .desc {
+    color: #EDEDED;
+    margin-top: 10px;
+}
+
+.overlay .date {
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.overlay .vote {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid green;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+/* Hover cursor pointer */
+.item:hover {
+    cursor: auto;
+}
+
+/* CURSOR SHAPE ON H1 & P DESC IN A CARD */
+.item h1:hover,
+.item p.desc:hover {
+    cursor: text;
+    user-select: text;
+}
+
+.overlay h1::selection,
+.overlay p.desc::selection {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
+
+/* Foooerrrrrrrrrrrrrrrrrrrrrrrrrrrr */
+/* contact  SECTION*/
+#contact .form-control {
+    box-shadow: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #CED4DA;
+    border-radius: 0;
+    color: #fff;
+    transition: all 0.5s;
+}
+#contact .form-control::placeholder {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* عشان ايENGINE وهل دي حاجه ضروري احطها ولا ممكن استبدلها عادي؟  */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: none;
+}
+.form-btn {
+    background-color: var(--main-color);
+    color: #fff!important;
+    padding: 10px 25px;
+    transition: all 0.2s ease-in-out;
+    border: none;
+}
+.form-btn:hover {
+    color: #000!important;
+    background-color: #F8F6F6;
+}
+.showPass {
+    background-color: transparent;
+    position: absolute;
+    right: 10px;
+    bottom: -20px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.error {
+    color: rgb(214, 46, 51);
+    position: absolute;
+    font-weight: 700;
+}
+#contact input::placeholder{
+   color: #6C757D !important;
+}
+
+
+
+/*  LOADING SCREEN*/
+.loading
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--main-color); 
+    z-index: 9999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 3px solid #FFF;
+    border-right: 3px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+  
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.hide-loading {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+
+
+/*Arrowwwwwwwwwww back-to-top */
+/* عشان ايENGINE وهل دي حاجه ضروري احطها ولا ممكن استبدلها عادي؟  */
+#back-to-top {
+    position: fixed;
+    background-color: var(--main-color);
+    height: 40px;
+    width: 40px;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    -webkit-box-shadow: 0px 5px 15px rgb(0 0 0 / 15%);
+    box-shadow: 0px 5px 15px rgb(0 0 0 / 15%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+#back-to-top i
+{
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#back-to-top a {
+    color: #fff;
+}
+#back-to-top.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* annnnnnnnnnn */
+/* each li is hidden at the beggining */
+.side-nav .menu ul li {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* لما يضيف class show على side-nav */
+.side-nav.show .menu ul li {
+    animation: slideUp 0.5s forwards;
+}
+
+/* نعمل delay متسلسل لكل li  عشان عايزة ال تاثير يحصل علي كل العناصر*/
+.side-nav.show .menu ul li:nth-child(1) { animation-delay: 0s; }
+.side-nav.show .menu ul li:nth-child(2) { animation-delay: 0.1s; }
+.side-nav.show .menu ul li:nth-child(3) { animation-delay: 0.2s; }
+.side-nav.show .menu ul li:nth-child(4) { animation-delay: 0.3s; }
+.side-nav.show .menu ul li:nth-child(5) { animation-delay: 0.4s; }
+.side-nav.show .menu ul li:nth-child(6) { animation-delay: 0.5s; }
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIES EXAM</title>
+    <!-- Font Awesome CDN -->
+     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Bootstrap -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <!-- Media Query -->
+  <link rel="stylesheet" href="./css/media.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+ <div class="loading d-flex justify-content-center align-items-center">
+    <span class="loader"></span>
+ </div>
+    <nav class="position-fixed top-0 start-0 vh-100 text-center">
+    <div class="nav-logo">
+        <img src="./imgs/logo.png" class="img-fluid" alt="">
+    </div>
+
+    <div class="nav-menu">
+        <i class="fa-solid fa-align-justify"></i>
+    </div>
+
+    <div class="nav-social">
+        <i class="fa-solid fa-globe"></i>
+        <i class="fa-solid fa-share-nodes"></i>
+    </div>
+</nav>
+
+<div class="side-nav position-fixed top-0 start-0 vh-100">
+    <div class="menu mt-3">
+        <ul>
+            <li><a attr="nowPlaying">Now playing</a></li>
+            <li><a attr="popular">Popular</a></li>
+            <li><a attr="topRated">Top Rated</a></li>
+            <li><a attr="trending">Trending</a></li>
+            <li><a attr="upcoming">Upcoming</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="copyrights">
+        <div class="rights-social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-solid fa-globe"></i></a>
+        </div>
+
+        <p class="pt-3">Copyright © 2022 All Rights Reserved.
+        <br>Created by <a href="https://github.com/Develekko" class="link-danger fw-bold" target="_blank">Housam Ramadan</a></p>
+    </div>
+</div>
+<!-- Heroooooooooooooooooooooo  SECTION-->
+<section id="hero" class="container py-5">
+ <input id="search" type="search" placeholder="Search" class="form-control w-50 mx-auto bg-transparent rounded-pill text-white shadow-none border-white px-3">
+
+    <div id="moviesRow" class="row g-4 mt-3 text-white"></div>
+</section>
+<!-- Footerrrrrrrrrrrrrrrrrrrrrrrrrrrr  SECTION-->
+<footer>
+ <section id="contact" class="container text-white py-5">
+        <h2>Contact US</h2>
+        <form>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <input type="text" required id="name" maxlength="37" class="form-control mt-4" placeholder="Enter Your Name">
+                    <span class="error"></span>
+                </div>
+                <div class="col-md-6">
+                    <input type="email" required id="email" class="form-control mt-4" placeholder="Enter Your Email">
+                    <span class="error"></span>
+                </div>
+                <div class="col-md-6">
+                    <input type="number" required id="phone" class="form-control mt-4" placeholder="Enter Your Phone">
+                    <span class="error"></span>
+                </div>
+                <div class="col-md-6">
+                    <input type="number" required id="age" class="form-control mt-4" placeholder="Enter Your Age">
+                    <span class="error"></span>
+                </div>
+                <div class="col-md-6 position-relative">
+                    <input type="password" required id="password" class="form-control mt-4" placeholder="Enter Your Password">
+                    <span class="error"></span>
+                    <span class="showPass" style="opacity: 0; bottom: -20px;"><i class="fa-solid fa-eye-slash"></i></span>
+                </div>
+                <div class="col-md-6">
+                    <input type="password" required id="repassword" class="form-control mt-4" placeholder="ReEnter Password">
+                    <span class="error"></span>
+                </div>
+                <div class="col-md-12 mt-4">
+                    <button type="submit" class="form-btn rounded-2 animate__animated">Submit</button>
+                </div>
+            </div>
+        </form>
+    </section>
+</footer>
+<div id="back-to-top">
+    <a href="#">
+        <i class="fa-solid fa-arrow-up-long">
+        </i>
+    </a>
+</div>
+
+<script src="js/jquery-3.7.1.min.js"></script>  
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/index.js"></script>  
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // ندي delay صغير عشان الـ loading يظهر شوية
+    setTimeout(() => {
+        document.querySelector(".loading").classList.add("hide-loading");
+        document.querySelector(".content").classList.add("loaded");
+    }, 600); 
+});
+</script>
+</body>
+</html>
